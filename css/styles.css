@@ -54,15 +54,10 @@ body {
 
 
 
-/* .container {
-  margin: 0 auto;
-  width: 1158px;
-  padding-right: 15px;
-  padding-left: 15px;
-} */
 
 .container {
   max-width: 428px;
+  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -251,6 +246,9 @@ header {
   padding-bottom: 96px;
 }
 
+.advantages-li:nth-child(-n + 3) {
+  margin-bottom: 72px;
+}
 
 .advantages-icon {
 display: none;
@@ -264,6 +262,7 @@ display: none;
   letter-spacing: 0.2;
   line-height: 1.1;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .advantages-text {
@@ -811,12 +810,22 @@ display: none;
 
 .footer-section {
   
-  display: flex;
-  flex-wrap: wrap;
-  gap: 72px;
-justify-content: center;
+display: flex;
+text-align: start;
 
 }
+
+
+
+
+
+.footer-link {
+  display: block;
+}
+
+/* .footer-link, .footer-title, .footer-form-title {
+  text-align: center;
+} */
 
 .footer-link {
   color: var(--light);
@@ -884,9 +893,9 @@ justify-content: center;
 
 .footer-form {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap;
   gap: 16px;
-  justify-content: center;
+  justify-content: center; */
 }
 
 /* .email-thamb {
@@ -903,8 +912,8 @@ justify-content: center;
 }
 
 .footer-input {
-  min-width: 290px; 
-  width: 100%;
+  width: 264px; 
+  /* width: 100%; */
   height: 40px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -924,9 +933,10 @@ justify-content: center;
 }
 
 .footer-button {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  position: relative;
   fill: var(--primary-white-color);
   gap: 16px;
   color: var(--primary-white-color);
@@ -937,10 +947,19 @@ justify-content: center;
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 8px 24px;
+  margin-left: 24px;
   border: none;
   border-radius: 4px;
   min-width: 165px;
   height: 40px;
+  text-align: start;
+}
+
+.send {
+  position: absolute;
+top: 50%;
+right: 24px;
+translate: 0 -50%;
 }
 
 /* media */
@@ -956,11 +975,12 @@ justify-content: center;
     width: 260px;
   }
 
-  .footer-input {
+  /* .footer-input {
     min-width: 396px; 
+} */
+
 
 }
-
 /* ---------------------------------tablet--------------------------------- */
 
 @media screen and (min-width: 768px) {
@@ -1002,10 +1022,39 @@ justify-content: center;
   width: calc((100% - 234px) / 3);
 
 }
+}
 
+/* .footer-link, .footer-title, .footer-form-title {
+  text-align: start;
+}
+
+.footer-section {
+  column-gap: 24px;
 
 
 }
+
+.footer-input {
+  min-width: 264px; 
+
+
+} */
+
+/* .footer-form {
+  gap: 24px;
+} */
+
+/* .box-footer {
+  margin-left: 108px;
+ margin-right: 24px;
+}
+
+.tertiary-box-footer {
+  margin-left: 108px;
+  margin-right: auto;
+} */
+
+
 
 /* ----------------------------------------desktop------------------------ */
 
@@ -1108,9 +1157,25 @@ justify-content: center;
       font-weight: 400;
     }
 
+   .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+   }
+
+   .box-footer {
+    margin-right: 120px;
+   }
+
+   .second-box-footer {
+    margin-right: 80px;
+   }
+
 }
 
 /* ---------------Отдельные промежутки---------------- */
+
+
+
 
 @media screen and (max-width: 479px) {
   .logo-icon {
@@ -1118,23 +1183,78 @@ justify-content: center;
   }
 }
 
+
 @media screen and (max-width: 767px) {
-  .advantages-li:nth-child(-n + 3) {
+    
+  .footer-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+         }
+   .box-footer {
+    margin-bottom: 74px;
+   }      
+
+   .second-box-footer {
     margin-bottom: 72px;
-  }
+   }
+  
+    .footer-input {
+        margin-bottom: 16px;
+        width: 100%;
+       }
 
-  .advantages-ul .title {
-    text-align: center;
-  }
-
-  .footer-link {
-    display: block;
-  }
-
-  .footer-link, .footer-title, .footer-form-title {
-    text-align: center;
-  }
+       .footer-form {
+        margin-left: 0;
+      
+          display: block;
+         
+       }
 }
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px) { 
+  .footer-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+     }
+
+     .box-footer {
+      margin-right: 24px;
+      margin-bottom: 72px;
+     }
+     
+     .tertiary-box-footer {
+      margin-left: 120px;
+        margin-right: auto;
+     }
+}
+
+
+
+
+/* @media screen and (max-width: 767px) {
+  .footer-section {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+} */
+
+
+/* @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    
+
+
 
 
 
