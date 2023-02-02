@@ -568,11 +568,13 @@ header {
   transition: transform 250ms var(--timing-function);
 }
 
-.product-thumb:hover .product-overlay {
+.product-thumb:hover .product-overlay,
+.product-thumb:focus .product-overlay {
   opacity: 1;
 }
 
-.examples-title:hover .product-overlay {
+.examples-title:hover .product-overlay,
+.examples-title:focus .product-overlay {
   transform: translateX(0);
 }
 
@@ -612,7 +614,9 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 72px 24px 24px 24px;
+  padding: 68px 24px 24px 24px;
+
+  height: 584px;
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -625,8 +629,8 @@ header {
 }
 
 .modal-container {
-  width: 408px;
-  height: 576px;
+  width: 360px;
+  height: 488px;
 }
 
 .backdrop-button {
@@ -798,7 +802,7 @@ header {
 }
 
 .form-checked {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .text-area {
@@ -967,24 +971,12 @@ header {
     display: none;
   }
 
-  /* .header-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  } */
-
   .nav-main {
     display: flex;
     align-items: center;
   }
 
   .logo {
-    /* font-family: Raleway, cursive;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.33;
-    letter-spacing: 0.03em;
-    color: var(--dark); */
     margin-right: 123px;
   }
 
@@ -1065,7 +1057,7 @@ header {
 
   .hero {
     padding-top: 111px;
-    padding-bottom: 108px;
+    padding-bottom: 111px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1090,10 +1082,6 @@ header {
     line-height: 1;
     margin-bottom: 40px;
     max-width: 494px;
-  }
-
-  .modal-container {
-    width: 408px;
   }
 
   .advantages-ul {
@@ -1284,6 +1272,18 @@ header {
 /* ---------------Отдельные промежутки---------------- */
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .site-adress .link {
+    padding: 0;
+  }
+
+  .site-adress .item + .item {
+    margin-left: 0;
+  }
+
+  .site-adress {
+    width: 119px;
+  }
+
   .footer-section {
     display: flex;
     flex-wrap: wrap;
@@ -1296,8 +1296,17 @@ header {
   }
 
   .tertiary-box-footer {
-    margin-left: 120px;
+    margin-left: 108px;
     margin-right: auto;
+  }
+  .second-box-footer {
+    margin-right: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-ul .title {
+    text-align: start;
   }
 }
 
@@ -1343,7 +1352,7 @@ header {
 
   .modal-container {
     width: 360px;
-    min-height: 586px;
+    height: 488px;
   }
 
   .customers-ul {
@@ -1356,6 +1365,5 @@ header {
 @media screen and (max-width: 392px) {
   .modal-container {
     width: 300px;
-    min-height: 586px;
   }
 }
